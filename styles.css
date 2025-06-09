@@ -63,4 +63,38 @@
         flex-direction: column;
         align-items: left;
         }
+
+        /*Grid*/
+        .container_grid {  
+           display: grid; 
+  grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-rows: 1fr 1fr 1fr 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "header header header"
+    "section_gorizontal section_gorizontal section_gorizontal"
+    "section_vertical1 section_text section_text"
+    "section_vertical2 section_text section_text"; 
+}
+
+.header {
+  justify-self: center;
+  grid-area: header;
+}
+
+.section_gorizontal { 
+    justify-self: stretch; 
+  grid-area: section_gorizontal; 
+
+}
+
+.section_vertical1 { grid-area: section_vertical1; }
+.section_vertical2 { grid-area: section_vertical2; }
+
+.section_text {
+  justify-self: start; 
+  align-self: center; 
+  grid-area: section_text;
+}
+
        
